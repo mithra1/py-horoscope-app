@@ -1,0 +1,26 @@
+<!doctype html>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<html>
+	<head>
+		<title>My Horoscope App</title>
+	</head> 
+	<body>
+		{% if name %}
+		<p>Hello {{name}}!</p>
+		{% else %}
+		<p>Hello anonymous person!</p>
+		{% endif %}
+
+
+		<p>Would you like to know your horscope?!</p>
+		<div id="contact-form">
+			<form method="post" action="/horoscope">
+				<label for="text">Please Enter Your DOB:</label>
+				<input type="Date" id="dob" name="dob" required="required">
+				<input type="submit" value="Submit" id="submit"/>
+			</form>
+		</div>
+
+
+	</body> 
+</html>
